@@ -37,8 +37,8 @@ class Modulo extends Command
      */
     public function handle()
     {
-
-        if (dir(app_path().'//modules')){
+        dd(dir(app_path().'//modules'));
+        if (!dir(app_path().'//modules')){
             mkdir('modules');
         }
 
