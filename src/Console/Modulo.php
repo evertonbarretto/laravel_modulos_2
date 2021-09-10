@@ -52,7 +52,7 @@ class Modulo extends Command
         $pastas[] = $raiz.'Models';
         $pastas[] = $raiz.'Providers';
         $pastas[] = $raiz.'Repositories';
-        $pastas[] = $raiz.'routes';
+        $pastas[] = $raiz.'Routes';
         $pastas[] = $raiz.'Services';
         $pastas[] = $raiz.'Tests';
 
@@ -62,7 +62,7 @@ class Modulo extends Command
         {
             mkdir($pasta);
         }
-        $this->createFile('Modulos//'.$this->argument('nome').'//routes//web.php');
+        $this->createFile(app_path().'//modules//'.$this->argument('nome').'//routes//'.strtolower($this->argument('nome')).'.php');
 
         return 1;
     }
