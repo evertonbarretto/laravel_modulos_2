@@ -1,0 +1,24 @@
+{
+    "name": "evertonbarretto/laravel_modulos_2",
+    "description": "Laravel Modulos",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Evertonbarretto\\LaravelModulos2\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers" : [
+                "evertonbarretto\\laravel_modulos_2\\LaravelModulosServicesProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Everton Barretto",
+            "email": "barrettoeverton@gmail.com"
+        }
+    ],
+    "require": {}
+}
