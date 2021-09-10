@@ -41,7 +41,6 @@ class Modulo extends Command
         if (!file_exists('//modules')){
             mkdir('modules');
         }
-
         $raiz = 'modules/'.$this->argument('nome').'/';
         $pastas[] = $raiz.'FiltersMaps';
         $pastas[] = $raiz.'Http';
@@ -55,7 +54,6 @@ class Modulo extends Command
         $pastas[] = $raiz.'Routes';
         $pastas[] = $raiz.'Services';
         $pastas[] = $raiz.'Tests';
-
 
         mkdir($raiz);
         foreach ($pastas as $pasta)
