@@ -37,7 +37,43 @@ class Modulo extends Command
      */
     public function handle()
     {
-        dd($this->argument('nome'));
-        return 0;
+
+        if (dir('modules')){
+            mkdir('modules');
+        }
+
+        $raiz = 'modules/'.$this->argument('nome').'/';
+        $pastas[] = $raiz.'FiltersMaps';
+        $pastas[] = $raiz.'Http';
+        $pastas[] = $raiz.'Http/Controllers';
+        $pastas[] = $raiz.'Database';
+        $pastas[] = $raiz.'Database/migrations';
+        $pastas[] = $raiz.'Database/factories';
+        $pastas[] = $raiz.'Models';
+        $pastas[] = $raiz.'Providers';
+        $pastas[] = $raiz.'Repositories';
+        $pastas[] = $raiz.'routes';
+        $pastas[] = $raiz.'Services';
+        $pastas[] = $raiz.'Tests';
+
+
+        mkdir($raiz);
+        foreach ($pastas as $pasta)
+        {
+            mkdir($pasta);
+        }
+        $this->createFile('Modulos//'.$this->argument('nome').'//routes//web.php');
+
+        return 1;
+    }
+
+    private function createFile($path)
+    {
+        $myfile = fopen($path, "w") or die("Unable to open file!");
+        $txt = "<?php\n";
+        fwrite($myfile, $txt);
+        $txt = "use Illuminate\Support\Facades\Route;\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
     }
 }
