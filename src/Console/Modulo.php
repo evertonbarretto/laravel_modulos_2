@@ -38,7 +38,7 @@ class Modulo extends Command
     public function handle()
     {
 
-        if (!file_exists('//modules')){
+        if (!file_exists('modules//')){
             mkdir('modules');
         }
         $raiz = 'modules/'.$this->argument('nome').'/';
@@ -60,7 +60,7 @@ class Modulo extends Command
         {
             mkdir($pasta);
         }
-        $this->createFile(app_path().'//modules//'.$this->argument('nome').'//routes//'.strtolower($this->argument('nome')).'.php');
+        $this->createFile('modules//'.$this->argument('nome').'//routes//'.strtolower($this->argument('nome')).'.php');
 
         return 1;
     }
