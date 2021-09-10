@@ -10,7 +10,7 @@
     "extra": {
         "laravel": {
             "providers" : [
-                "evertonbarretto\\laravel_modulos_2\\LaravelModulosServicesProvider"
+                "evertonbarretto\\laravel_modulos_2\\LaravelModulosServiceProvider"
             ]
         }
     },
