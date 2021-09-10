@@ -24,7 +24,7 @@ class LaravelModulosServiceProvider extends ServiceProvider
         ]);
 
         foreach (glob(base_path(). '/Modules/*/routes/*.php') as $router_files){
-            require_once $router_files;
+            $this->loadRoutesFrom($router_files);
         }
 
         $mainPath = database_path('database/migrations');
