@@ -23,7 +23,9 @@ class LaravelModulosServiceProvider extends ServiceProvider
             Migration::class,
         ]);
 
-        $this->loadRoutesFrom('web.php');
+        foreach (glob(base_path(). '/Modules/*/routes/*.php') as $router_files){
+            require_once $router_files;
+        }
 
         $mainPath = database_path('database/migrations');
         $directories = glob( base_path().'/Modules/*/database/migrations' , GLOB_ONLYDIR);
