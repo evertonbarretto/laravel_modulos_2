@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "evertonbarretto\\LaravelModulos2\\": "src/"
+            "evertonbarretto\\laravel_modulos_2\\": "src/"
         }
     },
     "extra": {
