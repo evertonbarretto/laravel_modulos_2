@@ -38,7 +38,7 @@ class Migration extends Command
      */
     public function handle()
     {
-        Artisan::call("artisan make:migration {$this->argument('migration')} --path=modules//{$this->argument('modulo')}//Database//migrations");
+        Artisan::call("make:migration {$this->argument('migration')} --path=modules//{$this->argument('modulo')}//Database//migrations");
         return "Migration criado com sucesso";
     }
 
