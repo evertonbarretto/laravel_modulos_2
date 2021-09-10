@@ -48,7 +48,7 @@ class Model extends Command
         $factory = "\n  protected static function newFactory()\n{\n     return \Modules\Cadastro\database\factories\CategoriaFactory::new();\n  }";
         $factory = "";
         $contents =
-            "<?php\n\nnamespace Modulos\\".$modulo."\\Models;\n\nuse Illuminate\Database\Eloquent\Model;\nuse Illuminate\Database\Eloquent\Factories\HasFactory;\n\nclass ".$entidade." extends Model\n{\n    use HasFactory;".$factory."\n}";
+            "<?php\n\nnamespace Modules\\".$modulo."\\Models;\n\nuse Illuminate\Database\Eloquent\Model;\nuse Illuminate\Database\Eloquent\Factories\HasFactory;\n\nclass ".$entidade." extends Model\n{\n    use HasFactory;".$factory."\n}";
 
 
         $myfile = fopen($path, "w") or die("Unable to open file!");
