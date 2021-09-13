@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit92e02c9529cc5af93a2fa4b1e9f071cc
 {
     public static $prefixLengthsPsr4 = array (
-        'E' => 
+        'e' => 
         array (
-            'Evertonbarretto\\LaravelModulos2\\' => 32,
+            'evertonbarretto\\laravel_modulos_2\\' => 34,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Evertonbarretto\\LaravelModulos2\\' => 
+        'evertonbarretto\\laravel_modulos_2\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Evertonbarretto\\LaravelModulos2\\' => array($baseDir . '/src'),
+    'evertonbarretto\\laravel_modulos_2\\' => array($baseDir . '/src'),
 );

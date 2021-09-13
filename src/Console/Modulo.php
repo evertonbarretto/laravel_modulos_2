@@ -61,11 +61,11 @@ class Modulo extends Command
             mkdir($pasta);
         }
 
-        if (file_exists("resources/js/Pages")){
-            mkdir("resources/js/Pages/".$this->argument("modulo"));
-        }
-
         $this->createFile('modules//'.$this->argument('nome').'//routes//'.strtolower($this->argument('nome')).'.php');
+
+        if (file_exists("resources//js//Pages")){
+            mkdir("resources//js//Pages//".$this->argument("nome"));
+        }
 
         return 1;
     }
